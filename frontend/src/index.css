@@ -78,3 +78,14 @@ body {
   @apply w-full px-5 py-4 rounded-2xl bg-form-bg border border-form-border text-main-text focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all;
   resize: none;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
