@@ -60,7 +60,7 @@ function Portfolio() {
             {slideProjects.map((project, index) => (
               <div 
                 key={project.id}
-                className={`group relative w-[85vw] md:w-[45vw] lg:w-[35vw] shrink-0 transition-transform duration-500 hover:z-10 ${
+                className={`group relative w-[90vw] md:w-[45vw] lg:w-[42vw] shrink-0 transition-transform duration-500 hover:z-10 ${
                   index % 2 === 0 ? 'md:mb-32 md:self-start' : 'md:mt-32 md:self-end'
                 }`}
               >
@@ -98,10 +98,10 @@ function Portfolio() {
                 </a>
                 <div>
                   <div className="flex items-center gap-3 mb-3">
-                    <h3 className="text-2xl md:text-3xl font-bold text-main-text group-hover:text-brand-blue transition-colors">{project.title}</h3>
-                    <span className="w-2 h-2 rounded-full bg-brand-blue"></span>
+                    <h3 className="text-xl md:text-2xl font-semibold text-main-text group-hover:text-brand-blue transition-colors">{project.title}</h3>
+                    <span className="w-2 h-2 rounded-full bg-brand-blue opacity-80"></span>
                   </div>
-                  <p className="text-muted-text text-lg leading-relaxed mb-6">{project.description}</p>
+                  <p className="text-muted-text text-base leading-relaxed mb-6">{project.description}</p>
                 </div>
               </div>
             ))}

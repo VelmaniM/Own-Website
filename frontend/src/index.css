@@ -9,9 +9,9 @@
   --color-muted-text: #475569; /* Slate 600 */
   --color-border-subtle: rgba(15, 23, 42, 0.08);
   --color-btn-text: #ffffff;
-  --color-footer-bg: #0f172a;
-  --color-footer-text: #f8fafc;
-  --color-footer-muted: #94a3b8;
+  --color-footer-bg: #ffffff;
+  --color-footer-text: #0f172a;
+  --color-footer-muted: #475569;
   --color-form-bg: #ffffff;
   --color-form-border: rgba(15, 23, 42, 0.1);
   --color-contact-bg: #f1f5f9; /* Slate 100 */
@@ -25,7 +25,7 @@
   --color-muted-text: #a1a1aa; /* Zinc 400 */
   --color-border-subtle: rgba(255, 255, 255, 0.1);
   --color-btn-text: #09090b;
-  --color-footer-bg: #09090b;
+  --color-footer-bg: #000000;
   --color-footer-text: #fafafa;
   --color-footer-muted: #a1a1aa;
   --color-form-bg: #18181b;
