@@ -1,0 +1,48 @@
+@reference "../index.css";
+.footer-main {
+  @apply bg-footer-bg text-footer-text pt-24 pb-8 border-t border-border-subtle transition-colors duration-300;
+}
+
+.footer-grid {
+  @apply max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16;
+}
+
+.footer-col {
+  @apply flex flex-col gap-4;
+}
+
+.footer-logo {
+  @apply text-2xl font-bold mb-2 tracking-tight;
+}
+
+.footer-desc {
+  @apply text-footer-muted text-sm leading-relaxed mb-4;
+}
+
+.footer-social-container {
+  @apply flex gap-4 items-center;
+}
+
+.footer-social-link {
+  @apply w-10 h-10 flex items-center justify-center transition-transform hover:scale-110 drop-shadow-sm;
+}
+
+.footer-col-title {
+  @apply font-semibold text-lg mb-2 text-footer-text;
+}
+
+.footer-col-link {
+  @apply text-footer-muted hover:text-footer-text transition-colors text-sm;
+}
+
+.footer-contact-item {
+  @apply flex items-center gap-3 text-footer-muted hover:text-footer-text transition-colors text-sm;
+}
+
+.footer-contact-item-static {
+  @apply flex items-center gap-3 text-footer-muted text-sm;
+}
+
+.footer-bottom {
+  @apply max-w-6xl mx-auto px-6 pt-8 border-t border-border-subtle flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-footer-muted;
+}

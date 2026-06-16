@@ -1,15 +1,76 @@
-/* Styles specific to the Contact Us page */
+@reference "../../index.css";
 .contact-page-container {
-  animation: fadeIn 0.5s ease-out forwards;
+  /* This is kept for backwards compatibility */
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.form-label {
+  @apply block text-sm font-semibold text-main-text mb-1;
+}
+
+.form-input, .form-textarea {
+  @apply w-full bg-form-bg border border-form-border rounded-xl px-4 py-3 text-main-text placeholder-muted-text/50 focus:outline-none focus:ring-2 focus:ring-brand-blue/50 focus:border-brand-blue transition-all;
+}
+
+.contact-main {
+  @apply bg-contact-bg border-border-subtle transition-colors duration-300;
+}
+
+.contact-header {
+  @apply max-w-3xl mx-auto px-6 text-center;
+}
+
+.contact-badge-wrapper {
+  @apply flex justify-center;
+}
+
+.contact-badge {
+  @apply inline-flex items-center gap-4 mb-6 text-sm font-semibold tracking-[0.2em] uppercase text-brand-blue relative before:content-[''] before:block before:w-10 before:h-[2px] before:bg-brand-blue/40 before:rounded-full;
+}
+
+.contact-heading {
+  @apply text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-main-text;
+}
+
+.contact-desc {
+  @apply text-xl text-muted-text mb-12;
+}
+
+.contact-form {
+  @apply max-w-xl mx-auto text-left space-y-6;
+}
+
+.contact-grid {
+  @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+}
+
+.contact-field {
+  @apply space-y-2;
+}
+
+.contact-submit-btn {
+  @apply w-full bg-main-text text-btn-text hover:bg-brand-blue hover:text-white py-4 rounded-xl font-semibold text-lg transition-all shadow-[0_0_20px_-5px_rgba(14,165,233,0.3)];
+}
+
+.contact-submit-btn-disabled {
+  @apply opacity-70 cursor-not-allowed;
+}
+
+.contact-success-msg {
+  @apply bg-green-50 dark:bg-green-500/10 border border-green-200 dark:border-green-500/20 text-green-700 dark:text-green-400 p-6 rounded-2xl flex flex-col items-center justify-center gap-3;
+}
+
+.contact-success-icon {
+  @apply text-green-500;
+}
+
+.contact-success-title {
+  @apply font-semibold text-lg;
+}
+
+.contact-success-desc {
+  @apply text-sm text-center opacity-80;
+}
+
+.contact-error-msg {
+  @apply bg-red-50 dark:bg-red-500/10 border border-red-200 dark:border-red-500/20 text-red-600 dark:text-red-400 p-4 rounded-xl text-center text-sm font-medium;
 }

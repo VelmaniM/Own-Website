@@ -49,49 +49,53 @@ function ContactUs() {
 
   return (
     <div className="contact-page-container min-h-[80vh] flex flex-col justify-center py-20">
-      <section className="bg-contact-bg border-border-subtle transition-colors duration-300">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <div className="flex justify-center"><span className="inline-flex items-center gap-4 mb-6 text-sm font-semibold tracking-[0.2em] uppercase text-brand-blue relative before:content-[''] before:block before:w-10 before:h-[2px] before:bg-brand-blue/40 before:rounded-full">Contact Us</span></div>
-          <h2 className="text-4xl md:text-6xl font-semibold tracking-tight mb-6 text-main-text">Initiate Your Digital Transformation.</h2>
-          <p className="text-xl text-muted-text mb-12">Connect with our experts to discuss your strategic initiatives. We'll respond with actionable insights within 24 hours.</p>
+      <section className="contact-main">
+        <div className="contact-header">
+          <div className="contact-badge-wrapper"><span className="contact-badge">Contact Us</span></div>
+          <h2 className="contact-heading">Initiate Your Digital Transformation.</h2>
+          <p className="contact-desc">Connect with our experts to discuss your strategic initiatives. We'll respond with actionable insights within 24 hours.</p>
           
-          <form className="max-w-xl mx-auto text-left space-y-6" onSubmit={handleSubmit}>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
+          <form className="contact-form" onSubmit={handleSubmit}>
+            <div className="contact-grid">
+              <div className="contact-field">
                 <label className="form-label" htmlFor="name">Full Name</label>
                 <input ref={nameInputRef} className="form-input" type="text" id="name" required placeholder="Jane Doe" value={formData.name} onChange={(e) => setFormData({...formData, name: e.target.value})} />
               </div>
-              <div className="space-y-2">
+              <div className="contact-field">
                 <label className="form-label" htmlFor="email">Work Email</label>
                 <input className="form-input" type="email" id="email" required placeholder="jane@company.com" value={formData.email} onChange={(e) => setFormData({...formData, email: e.target.value})} />
               </div>
             </div>
             
-            <div className="space-y-2">
+            <div className="contact-field">
               <label className="form-label" htmlFor="message">Project Details</label>
               <textarea className="form-textarea" id="message" rows="5" required placeholder="Tell us about your technical requirements..." value={formData.message} onChange={(e) => setFormData({...formData, message: e.target.value})}></textarea>
             </div>
-            
-            <button 
-              type="submit" 
-              disabled={status === 'submitting'}
-              className="w-full py-4 bg-gradient-to-r from-brand-blue to-indigo-500 text-white font-medium rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-indigo-500/20 disabled:opacity-70"
-            >
-              {status === 'submitting' ? 'Sending...' : 'Send Message'}
-            </button>
-          </form>
 
-          {status === 'success' && (
-            <div className="mt-8 p-4 bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-xl border border-green-200 dark:border-green-800 flex items-center justify-center gap-3 animate-in fade-in slide-in-from-bottom-4">
-              <CheckCircle2 size={20} />
-              <p className="font-medium">Message received. We will be in touch shortly.</p>
-            </div>
-          )}
-          {status === 'error' && (
-            <div className="mt-8 p-4 bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-400 rounded-xl border border-red-200 dark:border-red-800 flex items-center justify-center gap-3 animate-in fade-in slide-in-from-bottom-4">
-              <p className="font-medium">Oops! Something went wrong. Please try again later.</p>
-            </div>
-          )}
+            {status === 'success' ? (
+              <div className="contact-success-msg animate-in fade-in slide-in-from-bottom-4">
+                <CheckCircle2 className="contact-success-icon" size={32} />
+                <div>
+                  <h4 className="contact-success-title">Message Sent Successfully</h4>
+                  <p className="contact-success-desc">We'll review your requirements and get back to you shortly.</p>
+                </div>
+              </div>
+            ) : (
+              <button 
+                type="submit" 
+                disabled={status === 'submitting'}
+                className={`contact-submit-btn ${status === 'submitting' ? 'contact-submit-btn-disabled' : ''}`}
+              >
+                {status === 'submitting' ? 'Processing...' : 'Send Message'}
+              </button>
+            )}
+
+            {status === 'error' && (
+              <div className="contact-error-msg animate-in fade-in">
+                Something went wrong. Please try again later.
+              </div>
+            )}
+          </form>
         </div>
       </section>
     </div>

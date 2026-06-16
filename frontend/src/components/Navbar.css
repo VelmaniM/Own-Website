@@ -1,0 +1,36 @@
+@reference "../index.css";
+.navbar-header {
+  @apply sticky top-0 z-50 w-full bg-white dark:bg-black shadow-[0_4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] transition-colors duration-300;
+}
+
+.navbar-nav {
+  @apply max-w-7xl mx-auto px-6 py-5 flex justify-between items-center text-main-text;
+}
+
+.navbar-logo {
+  @apply text-2xl font-extrabold tracking-tight flex items-center;
+}
+
+.navbar-links-container {
+  @apply hidden md:flex gap-10 text-[15px] font-medium;
+}
+
+.navbar-link {
+  @apply relative text-muted-text hover:text-main-text transition-colors;
+}
+
+.navbar-link-underline {
+  @apply absolute -bottom-1.5 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300;
+}
+
+.navbar-actions {
+  @apply flex items-center gap-6;
+}
+
+.navbar-theme-toggle {
+  @apply text-muted-text hover:text-main-text transition-colors;
+}
+
+.navbar-contact-btn {
+  @apply hidden sm:flex px-6 py-2.5 bg-main-text text-btn-text text-sm font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors;
+}
