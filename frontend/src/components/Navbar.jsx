@@ -11,6 +11,10 @@ function Navbar({ isDark, setIsDark }) {
         </Link>
         
         <div className="hidden md:flex gap-10 text-[15px] font-medium">
+          <a href="/#" className="relative text-muted-text hover:text-main-text transition-colors group">
+            Home
+            <span className="absolute -bottom-1.5 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
+          </a>
           <a href="/#about" className="relative text-muted-text hover:text-main-text transition-colors group">
             About
             <span className="absolute -bottom-1.5 left-0 w-full h-[2px] bg-brand-blue scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-300"></span>
