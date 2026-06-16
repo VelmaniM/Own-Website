@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import About from './components/About';
-import Services from './components/Services';
-import Portfolio from './components/Portfolio';
-import Contact from './components/Contact';
+import Home from './pages/Home';
+import ContactUs from './pages/ContactUs/ContactUs';
 import Footer from './components/Footer';
 
 function App() {
@@ -27,15 +25,16 @@ function App() {
   }, [isDark]);
 
   return (
-    <div className="app-container">
-      <Navbar isDark={isDark} setIsDark={setIsDark} />
-      <Hero />
-      <About />
-      <Services />
-      <Portfolio />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div className="app-container">
+        <Navbar isDark={isDark} setIsDark={setIsDark} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<ContactUs />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
