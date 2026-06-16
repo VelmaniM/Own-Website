@@ -46,7 +46,7 @@ function Portfolio() {
         <p className="text-lg text-muted-text max-w-2xl">A curated selection of my latest enterprise-grade applications and digital experiences. Swipe right to explore.</p>
       </div>
 
-      <div className="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar items-center md:items-stretch">
+      <div className="flex overflow-x-auto scroll-smooth overscroll-x-contain snap-x snap-mandatory hide-scrollbar items-center md:items-stretch">
         {/* We map through pairs of projects (slides) */}
         {projects.reduce((resultArray, item, index) => { 
           const chunkIndex = Math.floor(index/2)
@@ -56,7 +56,7 @@ function Portfolio() {
           resultArray[chunkIndex].push(item)
           return resultArray
         }, []).map((slideProjects, slideIndex) => (
-          <div key={slideIndex} className="w-full shrink-0 snap-center flex flex-col md:flex-row justify-center items-center md:items-stretch gap-12 md:gap-8 lg:gap-16 py-10">
+          <div key={slideIndex} className="w-full shrink-0 snap-center snap-always flex flex-col md:flex-row justify-center items-center md:items-stretch gap-12 md:gap-8 lg:gap-16 py-10">
             {slideProjects.map((project, index) => (
               <div 
                 key={project.id}
