@@ -1,0 +1,80 @@
+@import "tailwindcss";
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --color-brand-blue: #0ea5e9; /* Sky 500 */
+  --color-page-background: #f8fafc; /* Slate 50 */
+  --color-card-background: #ffffff;
+  --color-main-text: #0f172a; /* Slate 900 */
+  --color-muted-text: #475569; /* Slate 600 */
+  --color-border-subtle: rgba(15, 23, 42, 0.08);
+  --color-btn-text: #ffffff;
+  --color-footer-bg: #0f172a;
+  --color-footer-text: #f8fafc;
+  --color-footer-muted: #94a3b8;
+  --color-form-bg: #ffffff;
+  --color-form-border: rgba(15, 23, 42, 0.1);
+  --color-contact-bg: #f1f5f9; /* Slate 100 */
+}
+
+.dark {
+  --color-brand-blue: #38bdf8; /* Sky 400 */
+  --color-page-background: #09090b; /* Zinc 950 */
+  --color-card-background: #18181b; /* Zinc 900 */
+  --color-main-text: #fafafa; /* Zinc 50 */
+  --color-muted-text: #a1a1aa; /* Zinc 400 */
+  --color-border-subtle: rgba(255, 255, 255, 0.1);
+  --color-btn-text: #09090b;
+  --color-footer-bg: #09090b;
+  --color-footer-text: #fafafa;
+  --color-footer-muted: #a1a1aa;
+  --color-form-bg: #18181b;
+  --color-form-border: rgba(255, 255, 255, 0.1);
+  --color-contact-bg: #000000;
+}
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --color-brand-blue: var(--color-brand-blue);
+  --color-page-background: var(--color-page-background);
+  --color-card-background: var(--color-card-background);
+  --color-main-text: var(--color-main-text);
+  --color-muted-text: var(--color-muted-text);
+  --color-border-subtle: var(--color-border-subtle);
+  --color-btn-text: var(--color-btn-text);
+  --color-footer-bg: var(--color-footer-bg);
+  --color-footer-text: var(--color-footer-text);
+  --color-footer-muted: var(--color-footer-muted);
+  --color-form-bg: var(--color-form-bg);
+  --color-form-border: var(--color-form-border);
+  --color-contact-bg: var(--color-contact-bg);
+}
+
+body {
+  background-color: var(--color-page-background);
+  color: var(--color-main-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-brand-blue);
+  color: white;
+}
+
+/* Base utility mappings */
+.app-container {
+  @apply min-h-screen bg-page-background text-main-text font-sans transition-colors duration-500;
+}
+
+/* Contact form utilities */
+.form-label {
+  @apply text-sm font-medium text-muted-text px-1;
+}
+.form-input {
+  @apply w-full px-5 py-4 rounded-2xl bg-form-bg border border-form-border text-main-text focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all;
+}
+.form-textarea {
+  @apply w-full px-5 py-4 rounded-2xl bg-form-bg border border-form-border text-main-text focus:outline-none focus:border-brand-blue focus:ring-1 focus:ring-brand-blue transition-all;
+  resize: none;
+}
