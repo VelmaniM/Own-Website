@@ -1,50 +1,38 @@
 @reference "../index.css";
 .pricing-main {
-  @apply py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto font-sans;
+  @apply py-24 px-6 md:px-12 lg:px-24 max-w-7xl mx-auto font-sans relative;
 }
 
 .pricing-header {
   @apply text-center max-w-3xl mx-auto mb-16;
 }
 
+.pricing-badge {
+  @apply inline-block px-5 py-2 rounded-full bg-gradient-to-r from-brand-blue to-indigo-500 text-white text-sm font-bold uppercase tracking-widest mb-6 shadow-lg shadow-brand-blue/30;
+}
+
 .pricing-heading {
-  @apply text-5xl md:text-7xl font-extrabold tracking-tight text-main-text mb-6 leading-tight;
+  @apply text-4xl md:text-6xl font-extrabold tracking-tight text-main-text mb-6 leading-tight;
 }
 
 .pricing-description {
-  @apply text-xl text-muted-text font-medium;
-}
-
-.pricing-timer-banner {
-  @apply flex flex-col sm:flex-row items-center justify-center gap-4 mb-16;
-}
-
-.pricing-timer-badge {
-  @apply bg-red-50 dark:bg-red-900/20 text-red-600 dark:text-red-400 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest;
-}
-
-.pricing-timer-text {
-  @apply text-main-text font-medium text-sm md:text-base;
+  @apply text-xl text-muted-text font-medium leading-relaxed;
 }
 
 .pricing-grid {
-  @apply grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8;
+  @apply grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10;
 }
 
 .pricing-card {
-  @apply relative flex flex-col p-10 rounded-[2.5rem] bg-slate-50 dark:bg-zinc-900 transition-all duration-500 border border-transparent;
-}
-
-.pricing-card:hover {
-  @apply shadow-[0_20px_40px_-15px_rgba(0,0,0,0.05)] dark:shadow-[0_20px_40px_-15px_rgba(0,0,0,0.5)] -translate-y-1;
+  @apply relative flex flex-col p-10 rounded-[2rem] bg-white/50 dark:bg-zinc-900/50 backdrop-blur-xl transition-all duration-500 border border-slate-200/50 dark:border-white/5 hover:-translate-y-2 hover:shadow-2xl hover:shadow-brand-blue/10;
 }
 
 .pricing-card-recommended {
-  @apply bg-white dark:bg-zinc-800 shadow-[0_0_50px_-12px_rgba(0,0,0,0.1)] dark:shadow-[0_0_50px_-12px_rgba(0,0,0,0.5)] z-10 scale-100 md:scale-105;
+  @apply bg-gradient-to-b from-white to-slate-50 dark:from-zinc-900 dark:to-zinc-800 shadow-2xl shadow-indigo-500/20 z-10 scale-100 md:scale-105 border-indigo-500/30;
 }
 
 .pricing-recommended-badge {
-  @apply absolute -top-4 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-main-text text-page-background text-xs font-bold tracking-widest uppercase;
+  @apply absolute -top-5 left-1/2 -translate-x-1/2 px-6 py-2 rounded-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white text-xs font-bold tracking-widest uppercase shadow-lg shadow-purple-500/40;
 }
 
 .pricing-card-header {
@@ -52,7 +40,7 @@
 }
 
 .pricing-card-name {
-  @apply text-2xl font-bold text-main-text mb-3;
+  @apply text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500 mb-3;
 }
 
 .pricing-card-desc {
@@ -80,7 +68,7 @@
 }
 
 .pricing-feature-icon {
-  @apply text-main-text opacity-80;
+  @apply text-indigo-500 shrink-0;
 }
 
 .pricing-btn {
@@ -88,17 +76,13 @@
 }
 
 .pricing-btn-primary {
-  @apply bg-main-text text-page-background hover:scale-[1.02];
+  @apply bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700 text-white shadow-xl shadow-indigo-500/30 hover:shadow-indigo-500/50 hover:-translate-y-1;
 }
 
 .pricing-btn-secondary {
-  @apply bg-transparent border-2 border-main-text text-main-text hover:bg-slate-100 dark:hover:bg-zinc-800;
+  @apply bg-slate-100 dark:bg-white/5 hover:bg-slate-200 dark:hover:bg-white/10 text-main-text border border-slate-200 dark:border-white/10 hover:-translate-y-1 shadow-sm hover:shadow-md;
 }
 
-.pricing-cta-banner {
-  @apply mt-20 flex justify-center;
-}
-
-.pricing-cta-link {
-  @apply text-xl md:text-2xl font-semibold text-brand-blue hover:text-indigo-600 transition-colors flex items-center gap-2;
+.pricing-cta-button {
+  @apply bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white px-10 py-5 rounded-2xl font-bold text-xl shadow-2xl shadow-red-500/30 hover:shadow-red-500/50 hover:-translate-y-1 transition-all flex items-center gap-3 w-full sm:w-auto text-center justify-center;
 }

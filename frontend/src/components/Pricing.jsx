@@ -81,13 +81,16 @@ function Pricing() {
   return (
     <section id="pricing" className="pricing-main">
       <div className="pricing-header">
-        <h2 className="pricing-heading">Transparent pricing.<br/>No hidden fees.</h2>
-        <p className="pricing-description">Premium quality digital experiences tailored for your growth.</p>
+        <span className="pricing-badge">Special Offer</span>
+        <h2 className="pricing-heading">High Quality. Honest Pricing.</h2>
+        <p className="pricing-description">We believe in delivering world-class websites that give you 10x return on investment. Book today to lock in your discount.</p>
       </div>
 
-      <div className="pricing-timer-banner">
-        <span className="pricing-timer-badge">Limited Offer</span>
-        <span className="pricing-timer-text">Special pricing ends today: <strong className="font-mono">{timeLeft}</strong></span>
+      <div className="flex flex-col items-center justify-center mb-16 px-6">
+        <div className="bg-gradient-to-r from-red-500/10 to-orange-500/10 border border-red-500/30 text-red-600 dark:text-red-400 px-8 py-4 rounded-full flex flex-col sm:flex-row items-center gap-4 shadow-[0_0_30px_-10px_rgba(239,68,68,0.3)] animate-pulse">
+          <span className="font-bold uppercase tracking-widest text-sm">🔥 Mega Offer Ends Today:</span>
+          <span className="font-mono font-bold text-2xl">{timeLeft}</span>
+        </div>
       </div>
 
       <div className="pricing-grid">
@@ -123,13 +126,13 @@ function Pricing() {
         ))}
       </div>
 
-      <div className="pricing-cta-banner">
-        <Link to="/contact" className="pricing-cta-link">
-          Claim Immediate Booking Discount <span aria-hidden="true">→</span>
+      <div className="mt-16 flex justify-center px-6">
+        <Link to="/contact" className="pricing-cta-button">
+          Click Here For Immediate Booking Discount!
         </Link>
       </div>
 
-      <div className="mt-16 text-center text-xs text-muted-text max-w-xl mx-auto px-6 opacity-70">
+      <div className="mt-16 text-center text-sm text-muted-text max-w-2xl mx-auto px-6 opacity-80">
         <p>
           <strong className="text-main-text font-semibold">Please Note:</strong> No refunds on commenced projects. We provide free revisions to ensure your complete satisfaction.
         </p>
