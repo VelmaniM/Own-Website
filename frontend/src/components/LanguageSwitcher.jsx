@@ -2,8 +2,8 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Globe, Search } from 'lucide-react';
 
 const languages = [
-  { code: 'en', name: 'English' },
   { code: 'ta', name: 'தமிழ் (Tamil)' },
+  { code: 'en', name: 'English' },
   { code: 'hi', name: 'हिंदी (Hindi)' },
   { code: 'ml', name: 'മലയാളം (Malayalam)' },
   { code: 'te', name: 'తెలుగు (Telugu)' },
