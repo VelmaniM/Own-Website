@@ -57,7 +57,7 @@ function Navbar({ isDark, setIsDark }) {
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
           
-          <div className="hidden md:block">
+          <div className="flex items-center">
             <LanguageSwitcher />
           </div>
 
