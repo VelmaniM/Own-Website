@@ -1,6 +1,6 @@
 @reference "../index.css";
 .portfolio-main {
-  @apply max-w-[100vw] overflow-hidden py-16 border-t border-border-subtle;
+  @apply max-w-[100vw] overflow-hidden pt-16 pb-8 border-t border-border-subtle;
 }
 
 .portfolio-header {
@@ -48,11 +48,11 @@
 }
 
 .portfolio-project-card-up {
-  @apply md:mb-32 md:self-start;
+  @apply md:mb-12 md:self-start;
 }
 
 .portfolio-project-card-down {
-  @apply md:mt-32 md:self-end;
+  @apply md:mt-12 md:self-end;
 }
 
 .portfolio-image-wrapper {
