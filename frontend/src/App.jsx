@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ContactUs from './pages/ContactUs/ContactUs';
+import Terms from './pages/Terms/Terms';
+import Privacy from './pages/Privacy/Privacy';
 import Footer from './components/Footer';
 import { Analytics } from "@vercel/analytics/react";
 
@@ -32,6 +34,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact" element={<ContactUs />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
         </Routes>
         <Footer />
       </div>

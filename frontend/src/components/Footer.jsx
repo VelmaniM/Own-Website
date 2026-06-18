@@ -1,5 +1,6 @@
 import React from 'react';
 import { Mail, MapPin, Phone } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Footer.css';
 
 function Footer() {
@@ -77,6 +78,11 @@ function Footer() {
 
       <div className="footer-bottom">
         <p>© {new Date().getFullYear()} Velmani M. All rights reserved.</p>
+        <div className="footer-legal-links">
+          <Link to="/terms" className="footer-legal-link">Terms & Conditions</Link>
+          <span className="footer-legal-divider">•</span>
+          <Link to="/privacy" className="footer-legal-link">Privacy Policy</Link>
+        </div>
       </div>
     </footer>
   );
