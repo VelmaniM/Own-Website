@@ -24,7 +24,7 @@
 }
 
 .navbar-actions {
-  @apply flex items-center gap-6;
+  @apply flex items-center gap-4 sm:gap-6;
 }
 
 .navbar-theme-toggle {
@@ -33,4 +33,20 @@
 
 .navbar-contact-btn {
   @apply hidden sm:flex px-6 py-2.5 bg-main-text text-btn-text text-sm font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors;
+}
+
+.navbar-menu-toggle {
+  @apply md:hidden text-muted-text hover:text-main-text transition-colors flex items-center justify-center;
+}
+
+.navbar-mobile-menu {
+  @apply md:hidden flex flex-col bg-white dark:bg-black absolute top-full left-0 w-full border-t border-gray-100 dark:border-gray-800 shadow-lg py-4 px-6 gap-4 text-main-text transition-colors duration-300;
+}
+
+.navbar-mobile-link {
+  @apply text-lg font-medium text-muted-text hover:text-brand-blue transition-colors py-2 border-b border-gray-50 dark:border-gray-900;
+}
+
+.navbar-mobile-contact-btn {
+  @apply sm:hidden mt-2 inline-block px-6 py-3 bg-main-text text-btn-text text-center font-semibold rounded-lg hover:bg-brand-blue hover:text-white transition-colors;
 }

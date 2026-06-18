@@ -36,15 +36,15 @@
 }
 
 .portfolio-slider-container {
-  @apply flex overflow-x-auto snap-x snap-mandatory scroll-smooth pb-8 pt-4 px-12 -mx-12 overscroll-x-contain items-center md:items-stretch;
+  @apply flex flex-col md:flex-row md:overflow-x-auto md:snap-x md:snap-mandatory scroll-smooth pb-8 pt-4 px-4 md:px-12 md:-mx-12 md:overscroll-x-contain items-center md:items-stretch gap-8 md:gap-0;
 }
 
 .portfolio-slide {
-  @apply w-full shrink-0 snap-center snap-always flex flex-col md:flex-row justify-center items-center md:items-stretch gap-12 md:gap-8 lg:gap-16 py-10;
+  @apply w-full shrink-0 md:snap-center md:snap-always flex flex-col md:flex-row justify-center items-center md:items-stretch gap-8 md:gap-8 lg:gap-16 py-4 md:py-10;
 }
 
 .portfolio-project-card {
-  @apply relative w-[90vw] md:w-[45vw] lg:w-[42vw] shrink-0 transition-transform duration-500 hover:z-10;
+  @apply relative w-[90vw] sm:w-[80vw] md:w-[45vw] lg:w-[42vw] shrink-0 transition-transform duration-500 hover:z-10;
 }
 
 .portfolio-project-card-up {
@@ -56,7 +56,7 @@
 }
 
 .portfolio-image-wrapper {
-  @apply block aspect-[4/3] w-full bg-white dark:bg-black rounded-[2.5rem] overflow-hidden relative mb-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(255,255,255,0.02)] border border-border-subtle;
+  @apply block aspect-[4/3] w-full bg-white dark:bg-black rounded-[2.5rem] overflow-hidden relative mb-5 md:mb-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] dark:shadow-[0_8px_30px_rgba(255,255,255,0.02)] border border-border-subtle;
 }
 
 .portfolio-overlay {
@@ -106,11 +106,11 @@
 }
 
 .portfolio-info-container {
-  @apply flex items-center gap-3 mb-3;
+  @apply flex items-center justify-center md:justify-start gap-3 mb-3;
 }
 
 .portfolio-info-title {
-  @apply text-2xl font-bold mb-3 text-main-text group-hover:text-brand-blue transition-colors duration-300;
+  @apply text-2xl font-bold mb-3 text-main-text group-hover:text-brand-blue transition-colors duration-300 text-center md:text-left;
 }
 
 .portfolio-info-dot {
@@ -118,5 +118,5 @@
 }
 
 .portfolio-info-desc {
-  @apply text-muted-text text-base leading-relaxed mb-6;
+  @apply text-muted-text text-base leading-relaxed mb-6 text-center md:text-left px-2 md:px-0;
 }

@@ -22,11 +22,11 @@ const projects = [
   },
   {
     id: 3,
-    title: "E-Commerce Platform",
-    subtitle: "Digital Storefront",
-    description: "A robust, highly scalable e-commerce application built with Next.js and Stripe integration for seamless payments.",
-    link: "#",
-    type: "Enterprise Application"
+    title: "VetriVel Traders",
+    subtitle: "Premium Scrap Management",
+    description: "A modern digital platform for industrial flexible packaging scrap management, focusing on sustainable recycling and high-volume processing.",
+    link: "https://velmanim.github.io/Vetrivvel-Traders/",
+    type: "Client Project"
   },
   {
     id: 4,
