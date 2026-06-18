@@ -1,10 +1,10 @@
 @reference "../index.css";
 .services-main {
-  @apply max-w-6xl mx-auto px-6 py-32;
+  @apply max-w-6xl mx-auto px-6 py-16;
 }
 
 .services-header {
-  @apply mb-20 text-center flex flex-col items-center;
+  @apply mb-12 text-center flex flex-col items-center;
 }
 
 .services-badge {

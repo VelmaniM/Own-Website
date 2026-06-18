@@ -1,10 +1,10 @@
 @reference "../index.css";
 .about-main {
-  @apply max-w-6xl mx-auto px-6 py-32 border-t border-border-subtle;
+  @apply max-w-6xl mx-auto px-6 py-16 border-t border-border-subtle;
 }
 
 .about-header {
-  @apply mb-20;
+  @apply mb-12;
 }
 
 .about-badge {
