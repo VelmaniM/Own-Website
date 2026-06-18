@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import LanguageSwitcher from './LanguageSwitcher';
 import './Navbar.css';
 
 function Navbar({ isDark, setIsDark }) {
@@ -52,7 +53,13 @@ function Navbar({ isDark, setIsDark }) {
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          <div id="google_translate_element" className="navbar-translate hidden md:block"></div>
+          
+          <div className="hidden md:block">
+            <LanguageSwitcher />
+          </div>
+
+          <div id="google_translate_element" className="hidden"></div>
+
           <Link to="/contact" className="navbar-contact-btn">
             Contact Us
           </Link>
