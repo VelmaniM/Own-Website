@@ -88,6 +88,16 @@ body {
 }
 
 /* Base utility mappings */
+body {
+  @apply bg-page-background text-main-text font-sans antialiased transition-colors duration-300;
+  
+  /* Prevent text selection and highlighting */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 .app-container {
   @apply min-h-screen bg-page-background text-main-text font-sans transition-colors duration-500;
 }

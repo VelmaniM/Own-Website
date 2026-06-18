@@ -28,6 +28,46 @@ function App() {
     }
   }, [isDark]);
 
+  useEffect(() => {
+    // Anti-copy and Security Features
+    const preventAction = (e) => e.preventDefault();
+    
+    // Prevent right-click
+    document.addEventListener('contextmenu', preventAction);
+    // Prevent drag
+    document.addEventListener('dragstart', preventAction);
+
+    // Prevent keyboard shortcuts for copy and dev tools
+    const handleKeyDown = (e) => {
+      // Prevent F12, Ctrl+Shift+I, Ctrl+Shift+J, Ctrl+U, Ctrl+C, Ctrl+P
+      if (
+        e.keyCode === 123 || // F12
+        (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || // Ctrl+Shift+I / J
+        (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 67 || e.keyCode === 80)) || // Ctrl+U / C / P
+        (e.metaKey && e.altKey && (e.keyCode === 73 || e.keyCode === 74)) || // Mac Cmd+Option+I / J
+        (e.metaKey && (e.keyCode === 85 || e.keyCode === 67 || e.keyCode === 80)) // Mac Cmd+U / C / P
+      ) {
+        e.preventDefault();
+      }
+    };
+    document.addEventListener('keydown', handleKeyDown);
+
+    // PrintScreen clearing clipboard (basic attempt, not full-proof but requested)
+    const handleKeyUp = (e) => {
+      if (e.key === 'PrintScreen') {
+        navigator.clipboard.writeText('');
+      }
+    };
+    document.addEventListener('keyup', handleKeyUp);
+
+    return () => {
+      document.removeEventListener('contextmenu', preventAction);
+      document.removeEventListener('dragstart', preventAction);
+      document.removeEventListener('keydown', handleKeyDown);
+      document.removeEventListener('keyup', handleKeyUp);
+    };
+  }, []);
+
   return (
     <Router>
       <ScrollToTop />
