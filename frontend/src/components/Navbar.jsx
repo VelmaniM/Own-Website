@@ -14,7 +14,10 @@ function Navbar({ isDark, setIsDark }) {
   return (
     <header className="navbar-header">
       <nav className="navbar-nav">
-        <Link to="/" className="navbar-logo" onClick={() => setIsMenuOpen(false)}>
+        <Link to="/" className="navbar-logo" onClick={() => {
+          setIsMenuOpen(false);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}>
           Velmani M
         </Link>
         
