@@ -32,13 +32,19 @@ mongoose.connect(MONGODB_URI)
   .catch(err => console.error('MongoDB connection error:', err));
 
 // Email Transporter Configuration
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-});
+let transporter;
+nodemailer.createTestAccount().then(testAccount => {
+  transporter = nodemailer.createTransport({
+    host: process.env.SMTP_HOST || "smtp.ethereal.email",
+    port: process.env.SMTP_PORT || 587,
+    secure: false,
+    auth: {
+      user: process.env.EMAIL_USER || testAccount.user,
+      pass: process.env.EMAIL_PASS || testAccount.pass,
+    },
+  });
+  console.log("Email transporter ready.");
+}).catch(err => console.error("Failed to create test account:", err));
 
 // API Routes
 app.post('/api/contact', async (req, res) => {
@@ -96,7 +102,12 @@ app.post('/api/contact', async (req, res) => {
     Promise.all([
       transporter.sendMail(adminMailOptions),
       transporter.sendMail(clientMailOptions)
-    ]).catch(err => console.error('Email send error:', err));
+    ])
+    .then((info) => {
+      console.log('Admin Email Preview URL: %s', nodemailer.getTestMessageUrl(info[0]));
+      console.log('Client Email Preview URL: %s', nodemailer.getTestMessageUrl(info[1]));
+    })
+    .catch(err => console.error('Email send error:', err));
 
     res.status(201).json({ message: 'Message received successfully!', leadId: newLead._id });
   } catch (error) {

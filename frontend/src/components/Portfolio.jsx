@@ -138,7 +138,6 @@ function Portfolio() {
                   <div>
                     <div className="portfolio-info-container">
                       <h3 className="portfolio-info-title">{project.title}</h3>
-                      <span className="portfolio-info-dot"></span>
                     </div>
                     <p className="portfolio-info-desc">{project.description}</p>
                   </div>

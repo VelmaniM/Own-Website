@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ContactUs from './pages/ContactUs/ContactUs';
 import Footer from './components/Footer';
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [isDark, setIsDark] = useState(() => {
@@ -34,6 +35,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+      <Analytics />
     </Router>
   );
 }
