@@ -11,8 +11,8 @@ function Home() {
   return (
     <>
       <SEO 
-        title="Best Web Developer Company" 
-        description="Partner with the best web developer company to build fast, secure, and beautiful websites and apps for your business globally." 
+        title="Velmani M | Best Web Developer Company" 
+        description="Partner with Velmani M, the best web developer company, to build fast, secure, and beautiful websites and apps for your business globally." 
       />
       <Hero />
       <About />

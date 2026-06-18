@@ -53,7 +53,7 @@ function ContactUs() {
   return (
     <div className="contact-page-container min-h-[80vh] flex flex-col justify-center py-20">
       <SEO 
-        title="Contact Us" 
+        title="Contact Velmani M | Best Web Developer Company" 
         description="Get in touch with Velmani M for premium web development, app design, and SEO services. Start your digital transformation project today." 
       />
       <section className="contact-main">
