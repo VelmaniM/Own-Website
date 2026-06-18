@@ -93,7 +93,7 @@ function LanguageSwitcher() {
               placeholder="Search language..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full bg-transparent border-none focus:outline-none text-sm text-main-text placeholder-muted-text py-1.5"
+              className="w-full bg-transparent border-none focus:outline-none text-base text-main-text placeholder-muted-text py-1.5"
             />
           </div>
           <div className="max-h-60 overflow-y-auto hide-scrollbar py-1">
