@@ -4,46 +4,46 @@ import './Pricing.css';
 
 const pricingPlans = [
   {
-    id: 'basic',
-    name: 'Basic',
+    id: 'starter',
+    name: 'Starter Website',
     price: '₹15,000',
-    description: 'Perfect for small businesses looking for a professional online presence.',
+    description: 'The perfect launchpad for new businesses. Premium quality at an affordable price.',
     features: [
-      'Custom 5-page Website',
-      'Mobile Responsive Design',
-      'Basic SEO Setup',
-      'Contact Form Integration',
-      '1 Month Free Support'
+      '5-Page Stunning Design',
+      'Mobile-First & Fast Loading',
+      'Google SEO Foundation',
+      'Lead Generation Forms',
+      '30 Days Free Maintenance'
     ],
     recommended: false
   },
   {
-    id: 'pro',
-    name: 'Professional',
+    id: 'business',
+    name: 'Business Growth',
     price: '₹35,000',
-    description: 'Ideal for growing companies needing advanced features and dynamic content.',
+    description: 'Our most popular plan. Packed with advanced features to scale your digital presence rapidly.',
     features: [
-      'Up to 15 Pages',
-      'Premium Custom Design',
-      'Advanced SEO & Analytics',
-      'CMS Integration (Blog)',
-      'E-commerce Ready',
-      '3 Months Free Support'
+      'Up to 15 Premium Pages',
+      'Advanced Animations & UI',
+      'High-Performance SEO',
+      'Dynamic Blog / CMS System',
+      'Fast Cloud Hosting Included',
+      '90 Days Priority Support'
     ],
     recommended: true
   },
   {
-    id: 'enterprise',
-    name: 'Enterprise',
-    price: 'Custom',
-    description: 'Full-scale digital solutions for large organizations and complex platforms.',
+    id: 'custom',
+    name: 'Custom Web App',
+    price: 'Let\'s Talk',
+    description: 'Need a complete digital transformation? We build secure, scalable apps tailored to your unique needs.',
     features: [
-      'Unlimited Pages',
-      'Custom Web Application',
-      'Complex API Integrations',
-      'Advanced Security Setup',
-      'Dedicated Cloud Hosting',
-      '24/7 Priority Support'
+      'Unlimited Pages & Features',
+      'E-commerce & Web Apps',
+      'Custom API Integrations',
+      'Bank-Grade Security',
+      'Global Scalable Servers',
+      'Lifetime Dedicated Support'
     ],
     recommended: false
   }
@@ -53,9 +53,9 @@ function Pricing() {
   return (
     <section id="pricing" className="pricing-main">
       <div className="pricing-header">
-        <span className="pricing-badge">Plans</span>
-        <h2 className="pricing-heading">Simple Pricing.</h2>
-        <p className="pricing-description">Choose the best plan for your business. No hidden fees or extra charges.</p>
+        <span className="pricing-badge">Transparent Pricing</span>
+        <h2 className="pricing-heading">High Quality. Honest Pricing.</h2>
+        <p className="pricing-description">We believe in delivering world-class websites that give you 10x return on investment. 100% transparent with zero hidden fees.</p>
       </div>
 
       <div className="pricing-grid">
