@@ -62,6 +62,31 @@ body {
   color: white;
 }
 
+/* Google Translate specific fixes */
+body {
+  top: 0 !important;
+}
+.skiptranslate > iframe.skiptranslate {
+  display: none !important;
+  visibility: hidden !important;
+}
+.goog-te-banner-frame {
+  display: none !important;
+}
+.goog-te-gadget {
+  color: transparent !important;
+}
+.goog-te-gadget .goog-te-combo {
+  color: var(--color-main-text) !important;
+  background-color: var(--color-card-background);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: 6px;
+  padding: 4px;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  outline: none;
+}
+
 /* Base utility mappings */
 .app-container {
   @apply min-h-screen bg-page-background text-main-text font-sans transition-colors duration-500;

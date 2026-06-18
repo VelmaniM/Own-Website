@@ -52,6 +52,7 @@ function Navbar({ isDark, setIsDark }) {
           >
             {isDark ? <Sun size={20} /> : <Moon size={20} />}
           </button>
+          <div id="google_translate_element" className="navbar-translate hidden md:block"></div>
           <Link to="/contact" className="navbar-contact-btn">
             Contact Us
           </Link>
