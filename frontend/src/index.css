@@ -3,7 +3,7 @@
 
 :root {
   --color-brand-blue: #0ea5e9; /* Sky 500 */
-  --color-page-background: #f8fafc; /* Slate 50 */
+  --color-page-background: #ffffff; /* White */
   --color-card-background: #ffffff;
   --color-main-text: #0f172a; /* Slate 900 */
   --color-muted-text: #475569; /* Slate 600 */
@@ -14,7 +14,7 @@
   --color-footer-muted: #475569;
   --color-form-bg: #ffffff;
   --color-form-border: rgba(15, 23, 42, 0.1);
-  --color-contact-bg: #f1f5f9; /* Slate 100 */
+  --color-contact-bg: #ffffff; /* White */
 }
 
 .dark {
