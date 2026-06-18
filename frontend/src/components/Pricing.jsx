@@ -7,8 +7,8 @@ const pricingPlans = [
   {
     id: 'starter',
     name: 'Starter Website',
-    price: '₹9,999',
-    originalPrice: '₹15,000',
+    price: '₹15,000',
+    originalPrice: '₹25,000',
     description: 'The perfect launchpad for new businesses. Premium quality at an affordable price.',
     features: [
       '5-Page Stunning Design',
@@ -22,8 +22,8 @@ const pricingPlans = [
   {
     id: 'business',
     name: 'Business Growth',
-    price: '₹24,999',
-    originalPrice: '₹35,000',
+    price: '₹35,000',
+    originalPrice: '₹50,000',
     description: 'Our most popular plan. Packed with advanced features to scale your digital presence rapidly.',
     features: [
       'Up to 15 Premium Pages',
