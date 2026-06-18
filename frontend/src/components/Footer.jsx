@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, MapPin } from 'lucide-react';
+import { Mail, MapPin, Phone } from 'lucide-react';
 import './Footer.css';
 
 function Footer() {
@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer-grid">
         <div className="footer-col">
           <h3 className="footer-logo">Velmani M</h3>
-          <p className="footer-desc">Architecting the future of business through premium digital experiences and scalable enterprise solutions.</p>
+          <p className="footer-desc">We are the best web developer company dedicated to building fast, beautiful, and SEO-optimized websites that help your business grow globally.</p>
           <div className="footer-social-container">
             <a href="https://wa.me/919600487102" target="_blank" rel="noreferrer" className="footer-social-link" title="WhatsApp">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="#25D366">
@@ -44,20 +44,26 @@ function Footer() {
         
         <div className="footer-col">
           <h4 className="footer-col-title">Services</h4>
-          <a href="#services" className="footer-col-link">Experience Design</a>
-          <a href="#services" className="footer-col-link">Enterprise Engineering</a>
-          <a href="#services" className="footer-col-link">Digital Commerce</a>
+          <a href="#services" className="footer-col-link">Web Design & Development</a>
+          <a href="#services" className="footer-col-link">Mobile App Development</a>
+          <a href="#services" className="footer-col-link">SEO & Digital Marketing</a>
+          <a href="#services" className="footer-col-link">E-commerce Solutions</a>
         </div>
 
         <div className="footer-col">
           <h4 className="footer-col-title">Company</h4>
           <a href="#about" className="footer-col-link">About Us</a>
-          <a href="#work" className="footer-col-link">Client Success</a>
-          <a href="#contact" className="footer-col-link">Contact</a>
+          <a href="#work" className="footer-col-link">Our Projects</a>
+          <a href="#testimonials" className="footer-col-link">Client Reviews</a>
+          <a href="#pricing" className="footer-col-link">Pricing Plans</a>
         </div>
 
         <div className="footer-col">
           <h4 className="footer-col-title">Connect</h4>
+          <a href="tel:+919600487102" className="footer-contact-item">
+            <Phone size={16} />
+            <span>+91 96004 87102</span>
+          </a>
           <a href="mailto:velmani215@gmail.com" className="footer-contact-item">
             <Mail size={16} />
             <span>velmani215@gmail.com</span>
