@@ -84,6 +84,12 @@ function Pricing() {
           </div>
         ))}
       </div>
+
+      <div className="mt-12 text-center text-sm text-muted-text max-w-2xl mx-auto px-6">
+        <p>
+          <strong className="text-main-text font-semibold">Please Note:</strong> We do not offer cancellations or refunds once a project has commenced. However, we are fully committed to your satisfaction and will gladly provide revisions and changes to ensure the final product meets your expectations.
+        </p>
+      </div>
     </section>
   );
 }
