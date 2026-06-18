@@ -1,5 +1,6 @@
 import React from 'react';
 import { Check } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Pricing.css';
 
 const pricingPlans = [
@@ -77,9 +78,9 @@ function Pricing() {
               ))}
             </div>
 
-            <a href="#contact" className={`pricing-btn ${plan.recommended ? 'pricing-btn-primary' : 'pricing-btn-secondary'}`}>
+            <Link to="/contact" className={`pricing-btn ${plan.recommended ? 'pricing-btn-primary' : 'pricing-btn-secondary'}`}>
               Get Started
-            </a>
+            </Link>
           </div>
         ))}
       </div>
