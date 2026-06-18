@@ -123,11 +123,6 @@ function Pricing() {
         ))}
       </div>
 
-      <div className="pricing-cta-banner">
-        <Link to="/contact" className="pricing-cta-link">
-          Claim Immediate Booking Discount <span aria-hidden="true">→</span>
-        </Link>
-      </div>
 
       <div className="mt-16 text-center text-xs text-muted-text max-w-xl mx-auto px-6 opacity-70">
         <p>
