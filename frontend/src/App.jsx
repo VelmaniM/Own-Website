@@ -6,6 +6,7 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import Terms from './pages/Terms/Terms';
 import Privacy from './pages/Privacy/Privacy';
 import Footer from './components/Footer';
+import ScrollToTop from './components/ScrollToTop';
 import { Analytics } from "@vercel/analytics/react";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <div className="app-container">
         <Navbar isDark={isDark} setIsDark={setIsDark} />
         <Routes>
