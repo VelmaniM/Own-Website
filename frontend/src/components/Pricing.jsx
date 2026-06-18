@@ -81,19 +81,13 @@ function Pricing() {
   return (
     <section id="pricing" className="pricing-main">
       <div className="pricing-header">
-        <span className="pricing-badge">Special Offer</span>
-        <h2 className="pricing-heading">High Quality. Honest Pricing.</h2>
-        <p className="pricing-description">We believe in delivering world-class websites that give you 10x return on investment. Book today to lock in your discount.</p>
+        <h2 className="pricing-heading">Transparent pricing.<br/>No hidden fees.</h2>
+        <p className="pricing-description">Premium quality digital experiences tailored for your growth.</p>
       </div>
 
-      <div className="flex flex-col items-center justify-center mb-12 px-6">
-        <div className="bg-red-500/10 border border-red-500/20 text-red-500 px-6 py-3 rounded-full flex flex-col sm:flex-row items-center gap-3 animate-pulse">
-          <span className="font-bold uppercase tracking-wider text-sm">🔥 Mega Offer Ends Today:</span>
-          <span className="font-mono font-bold text-xl">{timeLeft}</span>
-        </div>
-        <Link to="/contact" className="mt-6 bg-brand-blue text-white px-8 py-4 rounded-xl font-bold text-lg shadow-xl shadow-brand-blue/20 hover:-translate-y-1 hover:shadow-brand-blue/40 transition-all flex items-center gap-2">
-          Click Here For Immediate Booking Discount!
-        </Link>
+      <div className="pricing-timer-banner">
+        <span className="pricing-timer-badge">Limited Offer</span>
+        <span className="pricing-timer-text">Special pricing ends today: <strong className="font-mono">{timeLeft}</strong></span>
       </div>
 
       <div className="pricing-grid">
@@ -102,21 +96,21 @@ function Pricing() {
             {plan.recommended && <div className="pricing-recommended-badge">Most Popular</div>}
             <div className="pricing-card-header">
               <h3 className="pricing-card-name">{plan.name}</h3>
-              <div className="pricing-card-price-container flex flex-col items-start gap-1 my-4">
+              <p className="pricing-card-desc">{plan.description}</p>
+              <div className="pricing-card-price-container">
                 {plan.originalPrice && (
-                  <span className="text-muted-text line-through text-lg decoration-red-500/50 decoration-2">
+                  <span className="pricing-card-original-price">
                     {plan.originalPrice}
                   </span>
                 )}
-                <div className="pricing-card-price !my-0">{plan.price}</div>
+                <div className="pricing-card-price">{plan.price}</div>
               </div>
-              <p className="pricing-card-desc">{plan.description}</p>
             </div>
             
             <div className="pricing-card-features">
               {plan.features.map((feature, idx) => (
                 <div key={idx} className="pricing-feature">
-                  <Check size={18} className="pricing-feature-icon" />
+                  <Check size={16} className="pricing-feature-icon" strokeWidth={3} />
                   <span>{feature}</span>
                 </div>
               ))}
@@ -129,7 +123,13 @@ function Pricing() {
         ))}
       </div>
 
-      <div className="mt-12 text-center text-sm text-muted-text max-w-2xl mx-auto px-6">
+      <div className="pricing-cta-banner">
+        <Link to="/contact" className="pricing-cta-link">
+          Claim Immediate Booking Discount <span aria-hidden="true">→</span>
+        </Link>
+      </div>
+
+      <div className="mt-16 text-center text-xs text-muted-text max-w-xl mx-auto px-6 opacity-70">
         <p>
           <strong className="text-main-text font-semibold">Please Note:</strong> No refunds on commenced projects. We provide free revisions to ensure your complete satisfaction.
         </p>
