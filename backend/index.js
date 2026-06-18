@@ -35,9 +35,10 @@ mongoose.connect(MONGODB_URI)
 let transporter;
 nodemailer.createTestAccount().then(testAccount => {
   transporter = nodemailer.createTransport({
-    host: process.env.SMTP_HOST || "smtp.ethereal.email",
+    service: process.env.EMAIL_USER && process.env.EMAIL_USER.includes('gmail.com') ? 'gmail' : undefined,
+    host: process.env.SMTP_HOST || (process.env.EMAIL_USER && process.env.EMAIL_USER.includes('gmail.com') ? undefined : "smtp.ethereal.email"),
     port: process.env.SMTP_PORT || 587,
-    secure: false,
+    secure: process.env.SMTP_PORT == 465,
     auth: {
       user: process.env.EMAIL_USER || testAccount.user,
       pass: process.env.EMAIL_PASS || testAccount.pass,
@@ -126,9 +127,9 @@ app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'ok', message: 'API is running smoothly.' });
 });
 
-if (process.env.NODE_ENV !== 'production') {
+if (!process.env.VERCEL) {
   app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on port ${PORT}`);
   });
 }
 

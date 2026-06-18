@@ -25,7 +25,7 @@ function ContactUs() {
     setSubmittedName(firstName);
 
     try {
-      const apiUrl = window.location.hostname === 'localhost' ? 'http://localhost:5001' : '';
+      const apiUrl = import.meta.env.VITE_API_URL || (window.location.hostname === 'localhost' ? 'http://localhost:5001' : '');
       const response = await fetch(`${apiUrl}/api/contact`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
