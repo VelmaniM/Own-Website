@@ -57,7 +57,12 @@ app.post('/api/contact', async (req, res) => {
     }
 
     const newLead = new Lead({ firstName, lastName, email, projectDetails });
-    await newLead.save();
+    try {
+      await newLead.save();
+      console.log('Lead saved to MongoDB successfully.');
+    } catch (dbError) {
+      console.warn('MongoDB save failed, but proceeding to send emails. Error:', dbError.message);
+    }
 
     // Send Admin Alert Email
     const adminMailOptions = {
