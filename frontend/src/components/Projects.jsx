@@ -1,14 +1,14 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion } from 'framer-motion';
-import './Portfolio.css';
+import './Projects.css';
 
 const projects = [
   {
     id: 1,
     title: "Fortuna Packaging",
     subtitle: "Packaging Solutions",
-    description: "A complete digital overhaul for a packaging solutions enterprise. Features a custom UI architecture and robust product showcasing.",
+    description: "A complete website redesign for a packaging company, making it easy for their customers to find products.",
     link: "https://velmanim.github.io/Fortuna-Packaging/",
     type: "Client Project"
   },
@@ -16,29 +16,29 @@ const projects = [
     id: 2,
     title: "Velmani M Portfolio",
     subtitle: "Personal Website",
-    description: "My previous personal portfolio showcasing my early journey, projects, and initial iterations of my design system.",
+    description: "My personal website showing my past projects, skills, and the web development services I offer.",
     link: "https://velmanim.github.io/VelmaniM-Portfolio/",
     type: "Personal Project"
   },
   {
     id: 3,
     title: "VetriVel Traders",
-    subtitle: "Premium Scrap Management",
-    description: "A modern digital platform for industrial flexible packaging scrap management, focusing on sustainable recycling and high-volume processing.",
+    subtitle: "Scrap Management",
+    description: "A modern website for an industrial scrap management company to help them get more local business online.",
     link: "https://velmanim.github.io/Vetrivvel-Traders/",
     type: "Client Project"
   },
   {
     id: 4,
-    title: "Dashboard Analytics",
-    subtitle: "Data Visualization",
-    description: "A real-time data visualization dashboard for business intelligence, featuring complex charts and secure authentication.",
+    title: "Business Dashboard",
+    subtitle: "Data Analytics",
+    description: "A custom web application built for business owners to easily track their sales and customer data.",
     link: "#",
     type: "SaaS Product"
   }
 ];
 
-function Portfolio() {
+function Projects() {
   const sliderRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(true);
@@ -67,9 +67,9 @@ function Portfolio() {
   return (
     <section id="work" className="portfolio-main">
       <div className="portfolio-header">
-        <span className="portfolio-badge">Portfolio</span>
+        <span className="portfolio-badge">Our Work</span>
         <h2 className="portfolio-heading">Featured Projects.</h2>
-        <p className="portfolio-description">A curated selection of my latest enterprise-grade applications and digital experiences. Swipe right to explore.</p>
+        <p className="portfolio-description">Take a look at some of the awesome websites we have built for our clients. Swipe right to explore.</p>
       </div>
 
       <div className="portfolio-slider-wrapper">
@@ -159,4 +159,4 @@ function Portfolio() {
   );
 }
 
-export default Portfolio;
+export default Projects;

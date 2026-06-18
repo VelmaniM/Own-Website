@@ -1,0 +1,79 @@
+@reference "../index.css";
+.testi-main {
+  @apply py-24 px-0 max-w-[100vw] overflow-hidden;
+}
+
+.testi-header {
+  @apply text-center max-w-3xl mx-auto mb-12 px-6;
+}
+
+.testi-badge {
+  @apply inline-block px-4 py-1.5 rounded-full bg-slate-100 dark:bg-white/5 border border-slate-200 dark:border-white/10 text-sm font-medium text-slate-600 dark:text-zinc-400 mb-6;
+}
+
+.testi-heading {
+  @apply text-4xl md:text-5xl font-bold tracking-tight text-main-text mb-6;
+}
+
+.testi-marquee-wrapper {
+  @apply w-full relative overflow-hidden py-8;
+  mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.testi-marquee-track {
+  @apply flex gap-6 w-max;
+  animation: scroll-marquee 20s linear infinite;
+}
+
+.testi-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 12px)); /* 12px is half of the 24px gap (gap-6) */
+  }
+}
+
+.testi-card {
+  @apply flex-shrink-0 w-[350px] md:w-[400px] flex flex-col text-left p-8 rounded-2xl bg-white dark:bg-zinc-900 border border-slate-200 dark:border-zinc-800 shadow-sm hover:shadow-xl transition-all duration-300;
+}
+
+.testi-google-header {
+  @apply flex justify-between items-start mb-4;
+}
+
+.testi-user-info {
+  @apply flex items-center gap-4;
+}
+
+.testi-avatar {
+  @apply w-12 h-12 rounded-full flex items-center justify-center text-white text-xl font-medium;
+}
+
+.testi-user-details {
+  @apply flex flex-col;
+}
+
+.testi-author-name {
+  @apply text-base font-semibold text-main-text leading-tight mb-1;
+}
+
+.testi-time {
+  @apply text-sm text-slate-500 dark:text-slate-400;
+}
+
+.testi-google-icon {
+  @apply flex-shrink-0;
+}
+
+.testi-stars {
+  @apply flex gap-0.5 mb-4;
+}
+
+.testi-content {
+  @apply text-base text-slate-700 dark:text-slate-300 leading-relaxed font-normal;
+}

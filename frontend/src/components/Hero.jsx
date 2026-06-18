@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Hero.css';
 
 function Hero() {
@@ -21,20 +22,20 @@ function Hero() {
       </div>
 
       <h1 className="hero-heading">
-        Architecting the <br className="hidden md:block"/> 
-        <span className="hero-heading-highlight">Digital Standard</span>
+        Grow Your Business <br className="hidden md:block"/> 
+        <span className="hero-heading-highlight">Online Faster</span>
       </h1>
       
       <p className="hero-description">
-        Premium web engineering for ambitious brands. I build scalable full-stack applications with exceptional user experiences.
+        Partner with the <strong>best web developer company</strong> to build beautiful, fast, and modern websites that help you attract more customers and increase your sales.
       </p>
 
       <div className="hero-actions">
-        <a href="#contact" className="hero-btn-primary">
+        <Link to="/contact" className="hero-btn-primary">
           Start a Project
-        </a>
+        </Link>
         <a href="#work" className="hero-btn-secondary group">
-          View Work
+          View Projects
           <ArrowRight size={18} className="hero-btn-icon" />
         </a>
       </div>

@@ -27,11 +27,19 @@ function Navbar({ isDark, setIsDark }) {
             <span className="navbar-link-underline"></span>
           </a>
           <a href="/#services" className="navbar-link group">
-            Capabilities
+            Services
             <span className="navbar-link-underline"></span>
           </a>
           <a href="/#work" className="navbar-link group">
-            Work
+            Projects
+            <span className="navbar-link-underline"></span>
+          </a>
+          <a href="/#testimonials" className="navbar-link group">
+            Reviews
+            <span className="navbar-link-underline"></span>
+          </a>
+          <a href="/#pricing" className="navbar-link group">
+            Pricing
             <span className="navbar-link-underline"></span>
           </a>
         </div>
@@ -62,8 +70,10 @@ function Navbar({ isDark, setIsDark }) {
         <div className="navbar-mobile-menu">
           <a href="/#" className="navbar-mobile-link" onClick={toggleMenu}>Home</a>
           <a href="/#about" className="navbar-mobile-link" onClick={toggleMenu}>About</a>
-          <a href="/#services" className="navbar-mobile-link" onClick={toggleMenu}>Capabilities</a>
-          <a href="/#work" className="navbar-mobile-link" onClick={toggleMenu}>Work</a>
+          <a href="/#services" className="navbar-mobile-link" onClick={toggleMenu}>Services</a>
+          <a href="/#work" className="navbar-mobile-link" onClick={toggleMenu}>Projects</a>
+          <a href="/#testimonials" className="navbar-mobile-link" onClick={toggleMenu}>Reviews</a>
+          <a href="/#pricing" className="navbar-mobile-link" onClick={toggleMenu}>Pricing</a>
           <Link to="/contact" className="navbar-mobile-contact-btn" onClick={toggleMenu}>
             Contact Us
           </Link>

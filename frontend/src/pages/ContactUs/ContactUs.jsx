@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import SEO from '../../components/SEO';
 import './ContactUs.css';
 
 function ContactUs() {
@@ -51,6 +52,10 @@ function ContactUs() {
 
   return (
     <div className="contact-page-container min-h-[80vh] flex flex-col justify-center py-20">
+      <SEO 
+        title="Contact Us" 
+        description="Get in touch with Velmani M for premium web development, app design, and SEO services. Start your digital transformation project today." 
+      />
       <section className="contact-main">
         <div className="contact-header">
           <div className="contact-badge-wrapper"><span className="contact-badge">Contact Us</span></div>

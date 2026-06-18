@@ -8,8 +8,8 @@ function About() {
       <div className="about-header">
         <span className="about-badge">About Me</span>
         <h2 className="about-heading">
-          Engineer by trade. <br/>
-          <span className="about-heading-sub">Architect by nature.</span>
+          Your Success is <br/>
+          <span className="about-heading-sub">Our Mission.</span>
         </h2>
       </div>
 
@@ -18,12 +18,12 @@ function About() {
         <div className="about-main-card">
           <div className="about-glow-blob"></div>
           <div className="about-content-wrapper">
-            <h3 className="about-title">The Philosophy</h3>
+            <h3 className="about-title">Who We Are</h3>
             <p className="about-paragraph">
-              I am a dedicated enterprise-grade software engineer specializing in transforming complex business requirements into elegant, high-performance web applications that scale effortlessly.
+              Recognized as the <strong>best web developer company</strong>, we are a dedicated digital agency specializing in helping businesses succeed online. We build beautiful, fast-loading websites and mobile apps that are easy to use.
             </p>
             <p className="about-paragraph-last">
-              With deep expertise in React, Node.js, and cloud-native architectures, I build secure, accessible, and breathtakingly fast digital experiences that place my clients at the forefront of their industries.
+              With our expertise in web design and digital marketing, we make sure your business stands out from the competition and reaches more customers online.
             </p>
           </div>
           
