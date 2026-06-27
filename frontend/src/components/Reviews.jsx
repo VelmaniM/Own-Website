@@ -10,7 +10,7 @@ const testimonials = [
     time: '2 weeks ago',
     initial: 'S',
     color: 'bg-blue-500',
-    content: 'Velmani transformed our digital presence completely. The new platform is not only beautiful but incredibly fast. Our customer engagement has increased by 40% since the launch.',
+    content: 'NEXOR transformed our digital presence completely. The new platform is not only beautiful but incredibly fast. Our customer engagement has increased by 40% since the launch.',
     rating: 5
   },
   {
@@ -28,7 +28,7 @@ const testimonials = [
     time: '2 months ago',
     initial: 'E',
     color: 'bg-purple-500',
-    content: 'Working with Velmani was seamless. They took our vague requirements and turned them into a stunning, conversion-optimized website. Highly recommended for any serious business.',
+    content: 'Working with NEXOR was seamless. They took our vague requirements and turned them into a stunning, conversion-optimized website. Highly recommended for any serious business.',
     rating: 5
   }
 ];
