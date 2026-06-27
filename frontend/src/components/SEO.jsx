@@ -17,7 +17,7 @@ function SEO({ title, description, name, type }) {
       <meta property="og:description" content={siteDescription} />
       
       {/* Twitter tags */}
-      <meta name="twitter:creator" content={name || 'Velmani M'} />
+      <meta name="twitter:creator" content={name || 'NEXOR'} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={siteTitle} />
       <meta name="twitter:description" content={siteDescription} />

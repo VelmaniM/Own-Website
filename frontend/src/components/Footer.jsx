@@ -8,7 +8,23 @@ function Footer() {
     <footer className="footer-main">
       <div className="footer-grid">
         <div className="footer-col">
-          <h3 className="footer-logo">Velmani M</h3>
+          <Link to="/" className="flex items-center gap-2 mb-4">
+            <img 
+              src="/light-logo-1.png?v=2" 
+              alt="NEXOR Logo Eye" 
+              className="h-12 sm:h-16 w-auto object-contain scale-110 sm:scale-125 origin-left dark:hidden"
+            />
+            <img 
+              src="/dark-logo-2.png" 
+              alt="NEXOR Logo Eye" 
+              className="h-12 sm:h-16 w-auto object-contain scale-110 sm:scale-125 origin-left hidden dark:block"
+            />
+            <img 
+              src="/dark-logo-1.png" 
+              alt="NEXOR Text" 
+              className="h-12 sm:h-16 w-auto object-contain -ml-4 sm:-ml-8 invert dark:invert-0"
+            />
+          </Link>
           <p className="footer-desc">We are the best web developer company dedicated to building fast, beautiful, and SEO-optimized websites that help your business grow globally.</p>
           <div className="footer-social-container">
             <a href="https://wa.me/919600487102" target="_blank" rel="noreferrer" className="footer-social-link" title="WhatsApp">
@@ -77,7 +93,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} Velmani M. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} NEXOR. All rights reserved.</p>
         <div className="footer-legal-links">
           <Link to="/terms" className="footer-legal-link">Terms & Conditions</Link>
           <span className="footer-legal-divider">•</span>
