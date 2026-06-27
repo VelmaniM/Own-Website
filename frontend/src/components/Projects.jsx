@@ -30,11 +30,11 @@ const projects = [
   },
   {
     id: 4,
-    title: "Business Dashboard",
-    subtitle: "Data Analytics",
-    description: "A custom web application built for business owners to easily track their sales and customer data.",
-    link: "#",
-    type: "SaaS Product"
+    title: "TaskFlow",
+    subtitle: "Task Management",
+    description: "A comprehensive task management web application to help teams organize projects and boost productivity.",
+    link: "https://velmani-taskflow.vercel.app/",
+    type: "Web Application"
   }
 ];
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 function SEO({ title, description, name, type }) {
-  const siteTitle = title ? `${title} | Velmani M` : 'Velmani M | Web Design & Development Services';
+  const siteTitle = title ? `${title} | NEXOR` : 'NEXOR';
   const siteDescription = description || 'We are a premium digital agency providing top-notch web design, app development, and SEO services globally. Grow your business online with us.';
   
   return (

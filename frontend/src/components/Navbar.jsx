@@ -14,11 +14,29 @@ function Navbar({ isDark, setIsDark }) {
   return (
     <header className="navbar-header">
       <nav className="navbar-nav">
-        <Link to="/" className="navbar-logo" onClick={() => {
+        <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px' }} onClick={() => {
           setIsMenuOpen(false);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}>
-          Velmani M
+          {/* Light Mode Eye */}
+          <img 
+            src="/light-logo-1.png?v=2" 
+            alt="NEXOR Logo Eye" 
+            className="h-16 sm:h-20 w-auto object-contain scale-110 sm:scale-125 origin-left dark:hidden"
+          />
+          {/* Dark Mode Eye */}
+          <img 
+            src="/dark-logo-2.png" 
+            alt="NEXOR Logo Eye" 
+            className="h-16 sm:h-20 w-auto object-contain scale-110 sm:scale-125 origin-left hidden dark:block"
+          />
+          
+          {/* Single Text Logo (Inverts to black for light mode, stays white for dark mode) */}
+          <img 
+            src="/dark-logo-1.png" 
+            alt="NEXOR Text" 
+            className="h-16 sm:h-20 w-auto object-contain -ml-6 sm:-ml-10 invert dark:invert-0"
+          />
         </Link>
         
         <div className="navbar-links-container">

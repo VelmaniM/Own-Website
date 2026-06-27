@@ -28,7 +28,7 @@ const testimonials = [
     time: '2 months ago',
     initial: 'E',
     color: 'bg-purple-500',
-    content: 'Working with Velmani was seamless. He took our vague requirements and turned them into a stunning, conversion-optimized website. Highly recommended for any serious business.',
+    content: 'Working with Velmani was seamless. They took our vague requirements and turned them into a stunning, conversion-optimized website. Highly recommended for any serious business.',
     rating: 5
   }
 ];

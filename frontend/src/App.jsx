@@ -19,6 +19,8 @@ function App() {
   });
 
   useEffect(() => {
+    document.documentElement.classList.add('theme-switching');
+    
     if (isDark) {
       document.documentElement.classList.add('dark');
       localStorage.setItem('theme', 'dark');
@@ -26,6 +28,12 @@ function App() {
       document.documentElement.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
+
+    const timeoutId = setTimeout(() => {
+      document.documentElement.classList.remove('theme-switching');
+    }, 50);
+
+    return () => clearTimeout(timeoutId);
   }, [isDark]);
 
   useEffect(() => {

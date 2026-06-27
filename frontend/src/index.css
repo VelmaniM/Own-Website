@@ -89,7 +89,7 @@ body {
 
 /* Base utility mappings */
 body {
-  @apply bg-page-background text-main-text font-sans antialiased transition-colors duration-300;
+  @apply bg-page-background text-main-text font-sans antialiased;
   
   /* Prevent text selection and highlighting */
   -webkit-user-select: none;
@@ -98,8 +98,12 @@ body {
   user-select: none;
 }
 
+.theme-switching * {
+  transition: none !important;
+}
+
 .app-container {
-  @apply min-h-screen bg-page-background text-main-text font-sans transition-colors duration-500;
+  @apply min-h-screen bg-page-background text-main-text font-sans;
 }
 
 /* Contact form utilities */

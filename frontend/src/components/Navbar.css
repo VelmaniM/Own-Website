@@ -1,6 +1,6 @@
 @reference "../index.css";
 .navbar-header {
-  @apply sticky top-0 z-50 w-full bg-white dark:bg-black shadow-[0_4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)] transition-colors duration-300;
+  @apply sticky top-0 z-50 w-full bg-white dark:bg-black shadow-[0_4px_20px_rgba(0,0,0,0.05)] dark:shadow-[0_4px_20px_rgba(0,0,0,0.4)];
 }
 
 .navbar-nav {
