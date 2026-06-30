@@ -14,7 +14,7 @@ function Navbar({ isDark, setIsDark }) {
   return (
     <header className="navbar-header">
       <nav className="navbar-nav">
-        <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px' }} onClick={() => {
+        <Link to="/" className="navbar-logo" style={{ display: 'flex', alignItems: 'center' }} onClick={() => {
           setIsMenuOpen(false);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}>
@@ -35,7 +35,7 @@ function Navbar({ isDark, setIsDark }) {
           <img 
             src="/dark-logo-1.png" 
             alt="NEXOR Text" 
-            className="h-16 sm:h-20 w-auto object-contain -ml-6 sm:-ml-10 invert dark:invert-0"
+            className="h-16 sm:h-20 w-auto object-contain -ml-10 sm:-ml-12 invert dark:invert-0"
           />
         </Link>
         
