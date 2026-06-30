@@ -93,7 +93,7 @@ function Footer() {
       </div>
 
       <div className="footer-bottom">
-        <p>© {new Date().getFullYear()} NEXOR. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} NEXOR AI Technologies. All rights reserved.</p>
         <div className="footer-legal-links">
           <Link to="/terms" className="footer-legal-link">Terms & Conditions</Link>
           <span className="footer-legal-divider">•</span>

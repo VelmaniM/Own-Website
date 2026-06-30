@@ -11,7 +11,7 @@ function Home() {
   return (
     <>
       <SEO 
-        description="Partner with NEXOR, the best web developer company, to build fast, secure, and beautiful websites and apps for your business globally." 
+        description="Partner with NEXOR AI Technologies, the best web developer company, to build fast, secure, and beautiful websites and apps for your business globally." 
       />
       <Hero />
       <About />
