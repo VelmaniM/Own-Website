@@ -8,11 +8,11 @@
 }
 
 .navbar-logo {
-  @apply text-2xl font-extrabold tracking-tight flex items-center;
+  @apply text-2xl font-extrabold tracking-tight flex items-center shrink-0;
 }
 
 .navbar-links-container {
-  @apply hidden md:flex gap-10 text-[15px] font-medium;
+  @apply hidden lg:flex gap-10 text-[15px] font-medium;
 }
 
 .navbar-link {
@@ -36,11 +36,11 @@
 }
 
 .navbar-menu-toggle {
-  @apply md:hidden text-muted-text hover:text-main-text transition-colors flex items-center justify-center;
+  @apply lg:hidden text-muted-text hover:text-main-text transition-colors flex items-center justify-center;
 }
 
 .navbar-mobile-menu {
-  @apply md:hidden flex flex-col bg-white dark:bg-black absolute top-full left-0 w-full border-t border-gray-100 dark:border-gray-800 shadow-lg py-4 px-6 gap-4 text-main-text transition-colors duration-300;
+  @apply lg:hidden flex flex-col bg-white dark:bg-black absolute top-full left-0 w-full border-t border-gray-100 dark:border-gray-800 shadow-lg py-4 px-6 gap-4 text-main-text transition-colors duration-300;
 }
 
 .navbar-mobile-link {
