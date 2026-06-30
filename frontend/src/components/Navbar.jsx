@@ -35,7 +35,7 @@ function Navbar({ isDark, setIsDark }) {
           <img 
             src="/dark-logo-1.png" 
             alt="NEXOR Text" 
-            className="h-16 sm:h-20 w-auto object-contain -ml-10 sm:-ml-12 invert dark:invert-0"
+            className="h-16 sm:h-20 w-auto object-contain -ml-8 sm:-ml-10 invert dark:invert-0"
           />
         </Link>
         
