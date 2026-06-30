@@ -22,20 +22,20 @@ function Navbar({ isDark, setIsDark }) {
           <img 
             src="/light-logo-1.png?v=2" 
             alt="NEXOR Logo Eye" 
-            className="h-16 sm:h-20 w-auto object-contain scale-110 sm:scale-125 origin-left dark:hidden"
+            className="h-16 w-auto object-contain scale-110 origin-left dark:hidden"
           />
           {/* Dark Mode Eye */}
           <img 
             src="/dark-logo-2.png" 
             alt="NEXOR Logo Eye" 
-            className="h-16 sm:h-20 w-auto object-contain scale-110 sm:scale-125 origin-left hidden dark:block"
+            className="h-16 w-auto object-contain scale-110 origin-left hidden dark:block"
           />
           
           {/* Single Text Logo (Inverts to black for light mode, stays white for dark mode) */}
           <img 
             src="/dark-logo-1.png" 
             alt="NEXOR Text" 
-            className="h-16 sm:h-20 w-auto object-contain -ml-8 sm:-ml-10 invert dark:invert-0"
+            className="h-16 w-auto object-contain -ml-8 invert dark:invert-0"
           />
         </Link>
         
