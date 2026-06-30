@@ -2,8 +2,8 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 function SEO({ title, description, name, type }) {
-  const siteTitle = title ? `${title} | NEXOR Web` : 'NEXOR Web';
-  const siteDescription = description || 'NEXOR Web - We are a premium digital agency providing top-notch web design, app development, and SEO services globally. Grow your business online with us.';
+  const siteTitle = title ? `${title} | NEXOR` : 'NEXOR';
+  const siteDescription = description || 'NEXOR - We are a premium digital agency providing top-notch web design, app development, and SEO services globally. Grow your business online with us.';
   
   return (
     <Helmet>
